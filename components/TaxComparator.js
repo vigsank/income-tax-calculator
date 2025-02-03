@@ -24,7 +24,7 @@ const TaxComparator = () => {
     const [hike1, setHike1] = useState(0);
     const [year2, setYear2] = useState(2025);
     const [hike2, setHike2] = useState(0);
-    const [fullCTC, setFullCTC] = useState(3150000);
+    const [fullCTC, setFullCTC] = useState(100);
     const [result1, setResult1] = useState(null);
     const [result2, setResult2] = useState(null);
     const [error, setError] = useState('');

@@ -24,7 +24,7 @@ import defaultTaxSlabs2025 from '../data/taxSlabs2025.json';
 
 const TaxCalculator = () => {
     const [year, setYear] = useState(2024);
-    const [fullCTC, setFullCTC] = useState(3150000);
+    const [fullCTC, setFullCTC] = useState(100);
     const [hikePercent, setHikePercent] = useState(0);
     const [customSlabs, setCustomSlabs] = useState(null);
     const [result, setResult] = useState(null);
