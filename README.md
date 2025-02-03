@@ -59,7 +59,7 @@ A full-featured, Next.js-based application designed to help you calculate your i
 
    ```bash
    git clone <repository-url>
-   cd <repository-folder>/client
+   cd <repository-folder>
    ```
 2.	Install Dependencies:
 
