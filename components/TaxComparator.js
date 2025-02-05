@@ -102,7 +102,6 @@ const TaxComparator = () => {
     // Define the fields to compare.
     const fields = [
         { key: 'newFullCTC', label: 'New Full CTC' },
-        { key: 'fixedPay', label: 'Fixed Pay' },
         { key: 'taxableIncome', label: 'Taxable Income' },
         { key: 'tax', label: 'Total Tax' },
         { key: 'annualPreTax', label: 'Annual Pre-Tax Income' },

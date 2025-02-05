@@ -113,6 +113,7 @@ const TaxCalculator = () => {
             const data = await response.json();
             if (response.ok) {
                 setCache(prev => ({ ...prev, [currentSignature]: data }));
+                console.log(data);
                 setResult(data);
             } else {
                 setError(data.error || 'Error calculating tax');
@@ -170,13 +171,22 @@ const TaxCalculator = () => {
                                     <strong>New Full CTC:</strong> ₹{safeFixed(result.newFullCTC)}
                                 </Typography>
                                 <Typography>
-                                    <strong>Fixed Pay:</strong> ₹{safeFixed(result.fixedPay)}
-                                </Typography>
-                                <Typography>
                                     <strong>Taxable Income:</strong> ₹{safeFixed(result.taxableIncome)}
                                 </Typography>
                                 <Typography>
-                                    <strong>Total Tax:</strong> ₹{safeFixed(result.tax)}
+                                    <strong>Tax (before Marginal Relief):</strong> ₹{safeFixed(result.taxBeforeMarginalRelief)}
+                                </Typography>
+                                <Typography>
+                                    <strong>Marginal Relief:</strong> ₹{safeFixed(result.marginalRelief)}
+                                </Typography>
+                                <Typography>
+                                    <strong>Tax Payable (after Marginal Relief):</strong> ₹{safeFixed(result.tax)}
+                                </Typography>
+                                <Typography>
+                                    <strong>Cess:</strong> ₹{safeFixed(result.cess)}
+                                </Typography>
+                                <Typography>
+                                    <strong>Total Tax Payable:</strong> ₹{safeFixed(result.totalTaxPayable)}
                                 </Typography>
                             </Grid>
                             <Grid item xs={6}>
